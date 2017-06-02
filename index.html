@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<title>Hotel App</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		table tr.color{
+			background-color: green;
+		}
+	</style>
+</head>
+<body ng-controller="hotelController">
+   <div class="container">
+   <div class="row">
+   	<h2><greet-msg></greet-msg></h2>	
+   		<p greet-msg></p>
+   </div>
+       <div class="row">
+       <table class="table table-hover">
+           <thead>
+               <tr>
+               <th>No</th>
+                <th >Name</th>
+                <th >location</th>
+                 <th >city</th>
+                  <th >cuisine</th>
+               </tr>
+           </thead>
+           <tbody>
+              <tr ng-repeat="hotel in hotelList" ng-class="{color:hotel.highlight}">
+              <td>{{$index+1}}</td>
+               <td >{{hotel.name|rating:'***'}}</td>
+               <td >{{hotel.location}}</td>
+               <td >{{hotel.city}}</td>
+               <td >{{hotel.cuisine}}</td>
+               <td><input type="button" value="Hotel details" ng-click="getHoteldetails(hotel)"></td>
+           </tr>
+           </tbody>
+       </table>
+        </div>
+        <div class="row" ng-show="showDetail">
+        	<hotel-details title="HotelDetails" show-hotel="selectedHotel" view-by-city="getHotelsByCity(selectedHotel.city)"></hotel-details>
+        </div>
+     </div>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="app/hotelapp/hotelapp.js"></script>
+	<script type="text/javascript" src="app/hotelapp/controllers/HotelMainCtrl.js"></script>
+	<script type="text/javascript" src="app/hotelapp/services/HotelFactory.js"></script>
+	<script type="text/javascript" src="app/hotelapp/filters/designfilter.js"></script>
+	<script type="text/javascript" src="app/hotelapp/directives/template.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+</body>
+</html>

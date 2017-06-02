@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <title></title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js" ></script>
+ </head>
+<body>
+<input type="text" ng-model="choice">
+<div ng-init="Mobiles=[
+{ name:'A123',model:'Sony',price:12000,quantity:9000},
+{ name:'B008',model:'Samsung',price:11200,quantity:9000},
+{ name:'Q567',model:'Sony',price:31200,quantity:7800,dom:'19/4/08'},
+{ name:'WA98',model:'Samsung',price:14200,quantity:12000,dom:'18/7/2015'},
+{name:'PO929',model:'Xiao',price:19202,quantity:78670,dom:'9/3/90'},
+{ name:'BH89',model:'Xiao',price:31902,quantity:18000,dom:'5/8/98'},
+{name:'D56',model:'Samsung',price:17120,quantity:690,dom:'07/11/90'}
+]">
+</div>
+<ul><li ng-repeat="mobile in Mobiles|orderBy:'name'|limitTo:6|filter:choice">
+    Name:   {{mobile.name |uppercase}}<br>
+    City:  {{ mobile.model|lowercase }} <br>
+    Price:  {{mobile.price|currency :'Rs'}}<br>
+    Quantity:  {{mobile.quantity|number}}<br>
+    Date of Manufacture:  {{mobile
+from Guest user030 to All Attendees:
+Date of Manufacture:  {{mobile.dom|date :'medium'}}<br>
+  </li>
+</ul>
+<ul><li ng-repeat="mobile in Mobiles">
+      {{mobile|json}}<br>
+   </li>
+</body>
+</html>

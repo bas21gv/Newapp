@@ -1,0 +1,14 @@
+<!-- <div class="row" ng-show="showHotel">
+        	Name:{{selectedHotel.name}}<br>
+        	Desc:{{selectedHotel.description}}<br>
+        	Rating:{{selectedHotel.ratings}}<br>
+        	<input type="button" value="Same city" ng-click="getHotelsByCity(selectedHotel.city)">
+</div> -->
+
+<h2>{{title}}</h2>
+Name:{{showHotel.name}}<br>
+Desc:{{showHotel.description}}<br>
+Rating:{{showHotel.ratings}}<br>
+<input type="button" value="Same city" ng-click="viewByCity()">
+<button type="button" class="btn btn-primary" ng-click="posReviews()">Positive Reviews</button>
+<button type="button" class="btn btn-primary" ng-click="negReviews()">Negative Reviews</button>

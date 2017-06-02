@@ -1,0 +1,134 @@
+[
+        {
+     "name":"The Diner",
+     "location":"Adyar",
+     "cuisine":"['Indian','Chinese']",
+     "city":"Chennai",
+      "description":"Good Food"    ,
+      "ratings":"4 star",
+      "menus":[{
+          "itemName":"Naan",
+          "price":"120",
+          "foodtype":"main-course",
+          "menutype":"veg"
+      },
+      {
+          "itemName":"Chicken Noodles",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"non-veg"
+      },
+      {
+          "itemName":"Corn Soup",
+          "price":"200",
+          "foodtype":"soups",
+          "menutype":"veg"
+      }
+    ]
+},
+{
+    "name":"Little Italy",
+    "location":"Indira Nagar",
+     "cuisine":"['Continental','Italian']",
+     "city":"Bangalore",
+     "ratings":"3 star",
+      "description":"Good Service"    ,
+         "menus":[{
+          "itemName":"Veg Pizza",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"veg"
+      },
+      {
+          "itemName":"Chicken Pizza",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"non-veg"
+      },
+      {
+          "itemName":"Phulka",
+          "price":"200",
+          "foodtype":"starter",
+          "menutype":"veg"
+      }
+    ]
+},
+{
+    "name":"Pizza Mine",
+    "location":"Koramangala",
+     "cuisine":"['Continental','Italian']",
+     "city":"Bangalore",
+     "ratings":"4 star",
+      "description":"Tasty Food"    ,
+         "menus":[{
+          "itemName":"Naan",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"veg"
+      },
+      {
+          "itemName":"Chicken Noodles",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"non-veg"
+      },
+      {
+          "itemName":"Corn Soup",
+          "price":"200",
+          "foodtype":"soups",
+          "menutype":"veg"
+      }
+    ]
+},
+{
+    "name":"The Mainland",
+    "location":"Whitefield",
+    "ratings":"3 star",
+     "cuisine":"['Indian','Chinese']",
+     "city":"Bangalore",
+      "description":"Good Ambience"    ,
+         "menus":[{
+          "itemName":"Mushroom Noodles",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"veg"
+      },
+      {
+          "itemName":"Chicken Manchurian",
+          "price":"200",
+          "foodtype":"starter",
+          "menutype":"non-veg"
+      },
+      {
+          "itemName":"Manchow Soup",
+          "price":"200",
+          "foodtype":"soups",
+          "menutype":"veg"
+      }
+    ]
+},{
+    "name":"The Punjabi Dhaba",
+    "location":"Dharave",
+     "cuisine":"['Indian','Chinese']",
+     "city":"Mumbai",
+     "ratings":"3 star",
+      "description":"Good Ambience"    ,
+       "menus":[{
+          "itemName":"Naan",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"veg"
+      },
+      {
+          "itemName":"Phulka",
+          "price":"200",
+          "foodtype":"main-course",
+          "menutype":"non-veg"
+      },
+      {
+          "itemName":"Paneer Tikka",
+          "price":"200",
+          "foodtype":"gravy",
+          "menutype":"veg"
+      }]
+}]

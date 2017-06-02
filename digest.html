@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="newApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch</title>
+  <script src="bower_components/angular/angular.js"></script>
+<script>
+var app = angular.module('newApp', []);
+app.controller('myCtrl', ['$scope', function ($scope) {
+   $scope.message = 'Have a good day';
+   $scope.sayHi = function(name){
+    setTimeout(function(){
+      $scope.message="Goodbye";
+      $scope.greetings = "Hello "+name;
+      console.log($scope.greetings);
+      $scope.$apply(); //call the digest cycle
+      },2000);
+   }
+   
+$scope.$watch('message',function(newvalue,oldvalue){
+  console.log(newvalue);
+  console.log(oldvalue);
+})
+}]);
+</script>
+</head>
+<body >
+<div ng-controller="myCtrl">
+Enter Name<input type="text" ng-model='uname'>
+  <button ng-click='sayHi(uname)'>Click here</button>
+<br>
+{{uname}}<br>
+{{greetings}}<br>
+{{message}}
+</div>
+    
+</body>
+</html>
